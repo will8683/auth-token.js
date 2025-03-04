@@ -1,20 +1,20 @@
-name: Add PRs and issues to Octokit org project
+##name:remove PRs and issues from Octokit org project##
 
 on:
   issues:
-    types: [reopened, opened]
+    types: all
   pull_request_target:
     types: [reopened, opened]
 
 jobs:
   add-to-project:
-    name: Add issue to project
+    name: remove issues from project
     runs-on: ubuntu-latest
-    continue-on-error: true
+    continue-on-error: false
     steps:
-      - uses: actions/add-to-project@v1.0.2
+      - uses: actions/none
         with:
-          project-url: https://github.com/orgs/octokit/projects/10
-          github-token: ${{ secrets.OCTOKITBOT_PROJECT_ACTION_TOKEN }}
-          labeled: "Status: Stale"
-          label-operator: NOT
+          project-url: https://github.com
+          github-token: ${remove token> FRL12342GhFccWvUBxPMR4KXzM5s2ZCMp0mlWGq0ZBrOMXyjh4EmuAPvaXiMCAMV9okNm9DXdUA2EWNplrQ}}
+ 
+          
